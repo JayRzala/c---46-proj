@@ -5,7 +5,7 @@ var heart_1,heart_1_img , heart_2,heart_2_img , heart_3,heart_3_img;
 
 
 function preload(){
- bg_img = loadImage("assets/bg.jpeg");
+ bg_img = loadImage("assets/bg.jpg");
  player_img = loadImage("assets/shooter_3.png");
  zombie_img = loadImage("assets/zombie.png");
 player_standing = loadImage("assets/shooter_2.png");
@@ -97,11 +97,11 @@ function spawnEnemies (){
     if(frameCount%100===0){
     zombie = createSprite (random(500,1500),random(370,750),40,40);
     zombie.addImage(zombie_img);
-    zombie.scale = 0.09;
+    zombie.scale = 0.3;
     zombie.velocityX = -5;
     zombie.lifetime = 300;
     zombie.debug = true;
-    zombie.setCollider("rectangle",0,0,900,900);
+    zombie.setCollider("rectangle",0,0,500,900);
 
     zombie_group.add(zombie);
     }  
